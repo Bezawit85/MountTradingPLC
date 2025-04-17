@@ -1,13 +1,13 @@
 import { getPosts } from '@/app/lib/data'
 
-interface PageProps {
+export default async function BlogPost({
+  params,
+}: {
   params: { slug: string }
-}
-
-export default async function BlogPost({ params }: PageProps) {
+}) {
   const { slug } = params
   const posts = await getPosts()
-  const post = posts.find(p => p.slug === slug)
+  const post = posts.find((p) => p.slug === slug)
 
   if (!post) {
     return <div>Post not found.</div>
