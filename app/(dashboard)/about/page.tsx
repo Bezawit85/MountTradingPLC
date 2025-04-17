@@ -1,16 +1,9 @@
-import Link from 'next/link'
-import { getPosts } from '../../lib/data' 
+import React from 'react'
 
-export default async function Post() {
-  const posts = await getPosts()
-
+const About = () => {
   return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.slug}>
-          <Link href={`/about/${post.slug}`}>{post.title}</Link>
-        </li>
-      ))}
-    </ul>
+    <div>About</div>
   )
 }
+
+export default About
