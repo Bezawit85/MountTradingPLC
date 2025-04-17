@@ -1,12 +1,10 @@
 import { getPosts } from '@/app/lib/data'
 
-type Props = {
-  params: {
-    slug: string
-  }
+interface PageProps {
+  params: { slug: string }
 }
 
-export default async function BlogPost({ params }: Props) {
+export default async function BlogPost({ params }: PageProps) {
   const { slug } = params
   const posts = await getPosts()
   const post = posts.find(p => p.slug === slug)
