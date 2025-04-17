@@ -1,12 +1,28 @@
+'use client';
+
+import { useState } from 'react';
+import { RiMenu3Fill, RiCloseLargeFill } from 'react-icons/ri';
+
 const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div
-      className={`flex flex-col z-10 relative my-5 mx-5 text-white justify-between`}
-    >
+    <div className="flex items-center justify-between p-4 text-white font-bold">
       <h1>Mount Trading PLC</h1>
-      {menuItems.map((item, index) => (
-        <p key={index}>{item}</p>
-      ))}
+      <button onClick={() => setOpen(!open)} className="text-3xl">
+        {open ? <RiCloseLargeFill /> : <RiMenu3Fill />}
+      </button>
+      <div
+        className={`absolute top-full left-0 w-full bg-black transition-all duration-300 overflow-hidden ${
+          open ? 'max-h-screen' : 'max-h-0'
+        }`}
+      >
+        {menuItems.map((item, i) => (
+          <p key={i} className="py-4 pl-4">
+            {item}
+          </p>
+        ))}
+      </div>
     </div>
   );
 };

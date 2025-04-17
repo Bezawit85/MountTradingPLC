@@ -1,10 +1,9 @@
-import React from 'react';
 import Image from 'next/image';
 
 const Hero = () => {
   return (
     <section>
-      <div>
+      <div className={`min-h-screen`}>
         <Image
           src="/image/coffeeDesktopBackground.jpg"
           alt="Hero Background"
@@ -23,6 +22,9 @@ const Hero = () => {
           priority
           className="md:hidden"
         />
+      </div>
+      <div className={`min-h-screen`}>
+        <h1>about</h1>
       </div>
     </section>
   );
