@@ -1,21 +1,28 @@
-import React from "react";
-import Image from "next/image"; 
+import React from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="image-container">
+    <section>
+      <div>
         <Image
-          src="/image/coffeeBackground.jpg" 
+          src="/image/coffeeDesktopBackground.jpg"
           alt="Hero Background"
-          layout="fill" 
-          objectFit="cover" 
-          objectPosition="left center" 
-          quality={100} 
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+          className="hidden md:block"
         />
-      </div>
-      <div className="text-content">
-        <h1>Hero</h1>
+        <Image
+          src="/image/coffeeMobileBackground.jpg"
+          alt="Hero Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+          className="md:hidden"
+        />
       </div>
     </section>
   );
