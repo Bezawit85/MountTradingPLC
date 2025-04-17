@@ -6,6 +6,7 @@ import MobileNavbar from './MobileNavbar';
 
 const ResponsiveNavbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false); // State to prevent flicker on initial load
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +26,16 @@ const ResponsiveNavbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Ensure the component is loaded before rendering
+    setIsLoaded(true);
+  }, []);
+
   const menuItems = ['Home', 'About', 'Products', 'Services', 'Contact'];
+
+  if (!isLoaded) {
+    return null; // Don't render anything until the component is loaded
+  }
 
   return (
     <>
