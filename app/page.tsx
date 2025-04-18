@@ -1,9 +1,9 @@
-import Hero from './ui/hero/hero';
+import Homepage from './ui/hero/Homepage';
 
-export default function Home() {
+export default function page() {
   return (
     <div>
-      <Hero />
+      <Homepage />
     </div>
   );
 }
