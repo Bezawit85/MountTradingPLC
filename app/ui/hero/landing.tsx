@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Landing = () => {
   return (
-    <section className={`min-h-screen relative`}>
+    <section className="min-h-[50vh] sm:min-h-screen relative">
       <div>
         <Image
           src="/image/coffeeDesktopBackground.png"
@@ -24,7 +24,7 @@ const Landing = () => {
         />
       </div>
       <div className="bg-black absolute inset-0 opacity-20"></div>
-      <div className={`text-white absolute text-center inset-0 mt-80 md:mt-50`}>
+      <div className={`text-white absolute text-center inset-0 mt-30 md:mt-50`}>
         <div>
           <h1
             className={`text-3xl md:text-7xl font-bold mb-2.5 tracking-wider`}
