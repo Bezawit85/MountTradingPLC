@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import BrandSelector from './BrandNavbar';
 
@@ -10,18 +9,14 @@ const Navbar = () => {
   return (
     <>
       <BrandSelector />
-      <div className="flex z-10 relative px-10 bg-blue-950 justify-between items-center h-28">
-        <Link href="/" passHref>
-          <Image
-            src="/image/B.png"
-            alt="Mount Trading PLC"
-            className="h-30 w-auto cursor-pointer"
-            height={100}
-            width={100}
-          />
-        </Link>
+      <div
+        className={`flex z-10 relative px-5 sm:px-10 bg-blue-950 justify-between items-center h-28`}
+      >
+        <h1 className={`text-white font-bold cursor-pointer`}>
+          <Link href="/">MountTradingPLC</Link>
+        </h1>
 
-        <ul className="flex gap-8 text-white font-bold cursor-pointer text-md">
+        <ul className="flex gap-4 sm:gap-8 text-white font-bold cursor-pointer text-md">
           {menuItems.map((item, index) => (
             <li key={index} className="relative hover:text-gray-300">
               <Link href={`/${item.toLowerCase()}`} passHref>
