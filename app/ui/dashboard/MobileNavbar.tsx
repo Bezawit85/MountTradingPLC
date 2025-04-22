@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { RiMenu3Fill, RiCloseLargeFill } from 'react-icons/ri';
+import { CgClose, CgMenuRightAlt } from 'react-icons/cg';
 
 const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
   const [open, setOpen] = useState(false);
@@ -11,7 +11,7 @@ const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
     <div className="flex items-center justify-between p-4 text-black bg-white font-bold z-10 shadow-lg shadow-blue-600/30">
       <h1>Mount Trading PLC</h1>
       <button onClick={() => setOpen(!open)} className="text-3xl">
-        {open ? <RiCloseLargeFill /> : <RiMenu3Fill />}
+        {open ? <CgClose /> : <CgMenuRightAlt />}
       </button>
       <div
         className={`absolute top-full left-0 w-full bg-white text-black transition-all duration-300 overflow-hidden ${

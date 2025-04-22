@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -14,7 +15,16 @@ const DesktopNavbar = ({ menuItems }: { menuItems: string[] }) => {
     <div
       className={`flex z-10 relative my-5 mx-10 px-10 bg-white justify-between rounded-full items-center h-16 shadow-lg shadow-blue-600/30`}
     >
-      <h1 className={`font-bold`}>Mount Trading PLC</h1>
+      <Link href="/" passHref>
+        <Image
+          src="/image/A.png"
+          alt="Mount Trading PLC"
+          className="h-30 w-auto cursor-pointer"
+          height={100}
+          width={100}
+        />
+      </Link>
+
       <ul className={`flex gap-8 text-black font-bold cursor-pointer text-md`}>
         {menuItems.map((item, index) => (
           <li

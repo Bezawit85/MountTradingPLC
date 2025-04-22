@@ -31,7 +31,7 @@ const ResponsiveNavbar = () => {
     setIsLoaded(true);
   }, []);
 
-  const menuItems = ['Home', 'About', 'Products', 'Services', 'Contact'];
+  const menuItems = ['About', 'Products', 'Services', 'Contact'];
 
   if (!isLoaded) {
     return null; // Don't render anything until the component is loaded
