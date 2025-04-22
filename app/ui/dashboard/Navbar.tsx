@@ -12,11 +12,13 @@ const Navbar = () => {
       <div
         className={`flex z-10 relative px-5 sm:px-10 bg-blue-950 justify-between items-center h-28`}
       >
-        <h1 className={`text-white font-bold cursor-pointer`}>
+        <h1
+          className={`text-white font-bold cursor-pointer text-xs sm:text-md`}
+        >
           <Link href="/">MountTradingPLC</Link>
         </h1>
 
-        <ul className="flex gap-4 sm:gap-8 text-white font-bold cursor-pointer text-md">
+        <ul className="flex gap-4 sm:gap-8 text-white font-bold cursor-pointer text-xs sm:text-md">
           {menuItems.map((item, index) => (
             <li key={index} className="relative hover:text-gray-300">
               <Link href={`/${item.toLowerCase()}`} passHref>
