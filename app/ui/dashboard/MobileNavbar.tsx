@@ -3,9 +3,16 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { CgClose, CgMenuRightAlt } from 'react-icons/cg';
+import { usePathname } from 'next/navigation';
 
 const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname(); // Get the current pathname
+
+  const getLinkPath = (item: string) => {
+    const basePath = pathname.split('/')[1]; // Get the first part of the current path, e.g., 'pharma', 'coffee', etc.
+    return `/${basePath}/${item.toLowerCase()}`;
+  };
 
   return (
     <div className="flex items-center justify-between p-4 text-black bg-white font-bold z-10 shadow-lg shadow-blue-600/30">
@@ -21,7 +28,7 @@ const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
         {menuItems.map((item, i) => (
           <Link
             key={i}
-            href={`${item.toLowerCase()}`}
+            href={getLinkPath(item)} // Use the dynamic link path
             passHref
             onClick={() => setOpen(false)}
           >
