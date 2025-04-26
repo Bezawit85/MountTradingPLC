@@ -1,5 +1,11 @@
+import HomePage from '../ui/pharma/homePage';
+
 const Pharma = () => {
-  return <div>Pharma</div>;
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
 };
 
 export default Pharma;

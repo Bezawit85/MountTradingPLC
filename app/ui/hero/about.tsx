@@ -11,7 +11,7 @@ const About = () => {
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Pharma */}
         <div className="bg-blue-800 overflow-hidden max-w-sm mx-auto">
-          <div className="w-full h-64 relative">
+          <div className="w-full h-72 relative">
             <Image
               src="/image/pharmaImage.jpg"
               alt="Pharmaceutical Equipment"
@@ -31,7 +31,7 @@ const About = () => {
 
         {/* Coffee */}
         <div className="bg-amber-900 overflow-hidden max-w-sm mx-auto">
-          <div className="w-full h-64 relative">
+          <div className="w-full h-72 relative">
             <Image
               src="/image/coffeeImage.jpg"
               alt="Coffee Import"
