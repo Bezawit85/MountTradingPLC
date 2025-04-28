@@ -27,7 +27,7 @@ const About = () => {
       <section className="bg-[#F9F9F9] py-12 min-h-[80vh] flex flex-col px-4 md:px-8 lg:px-16">
         <div className="text-center">
           <h2 className="text-xl md:text-2xl font-bold text-[#534A4A]">
-            Our Core Values
+            What We Stand For
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
             {/* Vision */}
