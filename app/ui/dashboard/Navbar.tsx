@@ -13,14 +13,17 @@ const Navbar = () => {
         className={`flex z-10 relative px-5 sm:px-10 bg-blue-950 justify-between items-center h-28`}
       >
         <h1
-          className={`text-white font-bold cursor-pointer text-xs sm:text-lg`}
+          className={`text-white font-bold cursor-pointer text-xs sm:text-lg tracking-wide`}
         >
           <Link href="/">MountTradingPLC</Link>
         </h1>
 
         <ul className="flex gap-4 sm:gap-8 text-white font-bold cursor-pointer text-xs sm:text-lg">
           {menuItems.map((item, index) => (
-            <li key={index} className="relative hover:text-gray-300">
+            <li
+              key={index}
+              className="relative hover:text-gray-300 tracking-wide"
+            >
               <Link href={`/${item.toLowerCase()}`} passHref>
                 {item}
                 <span className="absolute bg-gray-300"></span>

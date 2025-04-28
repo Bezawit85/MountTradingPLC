@@ -1,52 +1,50 @@
+'use client';
 import React from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center mt-12 px-4">
-      <h1 className="text-center text-2xl md:text-5xl mb-12 text-gray-700">
+    <div className="flex flex-col items-center w-full">
+      {/* Title */}
+      <h1 className="text-center text-2xl md:text-5xl my-12 text-gray-700">
         Learn More About Our Two Unique Brands
       </h1>
 
-      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Pharma */}
-        <div className="bg-blue-800 overflow-hidden max-w-sm mx-auto">
-          <div className="w-full h-72 relative">
-            <Image
-              src="/image/pharmaImage.jpg"
-              alt="Pharmaceutical Equipment"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2 text-white">
-              Pharmaceutical Equipment
-            </h2>
-            <p className="text-sm text-gray-200">
-              High-quality machines for labs and production.
-            </p>
-          </div>
+      {/* Pharma Section */}
+      <div className="w-full bg-blue-50 py-16 px-6 flex flex-col items-center text-center">
+        <div className="max-w-2xl">
+          <div className="text-5xl mb-4">📦</div>
+          <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-4">
+            Pharma Equipment
+          </h2>
+          <p className="text-gray-700 mb-8">
+            High-quality machines for labs and production.
+          </p>
+          <Link
+            href="/pharma"
+            className="inline-block bg-blue-800 text-white px-6 py-3 rounded-full hover:bg-blue-900 transition"
+          >
+            Explore Pharma Equipment
+          </Link>
         </div>
+      </div>
 
-        {/* Coffee */}
-        <div className="bg-amber-900 overflow-hidden max-w-sm mx-auto">
-          <div className="w-full h-72 relative">
-            <Image
-              src="/image/coffeeImage.jpg"
-              alt="Coffee Import"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2 text-white">
-              Coffee Import
-            </h2>
-            <p className="text-sm text-gray-200">
-              Premium Ethiopian coffee directly from origin.
-            </p>
-          </div>
+      {/* Coffee Section */}
+      <div className="w-full bg-amber-50 py-16 px-6 flex flex-col items-center text-center">
+        <div className="max-w-2xl">
+          <div className="text-5xl mb-4">☕</div>
+          <h2 className="text-2xl md:text-4xl font-bold text-amber-900 mb-4">
+            Coffee Export
+          </h2>
+          <p className="text-gray-700 mb-8">
+            Premium Ethiopian coffee directly from origin.
+          </p>
+          <Link
+            href="/coffee"
+            className="inline-block bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-950 transition"
+          >
+            Explore Coffee Products
+          </Link>
         </div>
       </div>
     </div>
