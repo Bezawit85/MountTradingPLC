@@ -13,7 +13,7 @@ const HomePage = () => {
         priority
       />
       <section className="absolute inset-0 flex flex-col items-center justify-center p-4">
-        <h1 className="text-8xl font-bold tracking-wide mb-4 text-[#4E2814]">
+        <h1 className="text-4xl md:text-8xl font-bold tracking-wide mb-4 text-[#4E2814]">
           Farm to Cup
         </h1>
         <p className="tracking-wide mb-6 max-w-2xl text-center">
