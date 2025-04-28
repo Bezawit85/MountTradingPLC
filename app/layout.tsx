@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Roboto } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'Mount Trading PLC',
@@ -13,6 +13,12 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['900', '700', '400', '500', '300', '100'],
+  variable: '--font-roboto',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -21,7 +27,9 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${montserrat.variable}`}>{children}</body>
+      <body className={`${montserrat.variable} ${roboto.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

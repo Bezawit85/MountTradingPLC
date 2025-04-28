@@ -19,7 +19,7 @@ const DesktopNavbar = ({ menuItems }: { menuItems: string[] }) => {
 
   return (
     <div
-      className={`flex z-10 relative my-5 mx-10 px-10 bg-white justify-between rounded-full items-center h-16 shadow-lg shadow-blue-600/30`}
+      className={`flex z-10 relative my-5 mx-16 px-10 bg-white justify-between rounded-full items-center h-16 shadow-lg shadow-blue-600/30`}
     >
       <h1 className={`font-bold`}>MountTradingPLC</h1>
 
