@@ -23,7 +23,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Core Values */}
+      {/* Core Values Section */}
       <section className="bg-[#F9F9F9] py-12 min-h-[80vh] flex flex-col px-4 md:px-8 lg:px-16">
         <div className="text-center">
           <h2 className="text-xl md:text-2xl font-bold text-[#534A4A]">
