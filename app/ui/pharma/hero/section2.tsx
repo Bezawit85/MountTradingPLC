@@ -52,38 +52,6 @@ const AboutPage = () => {
           technology.&quot;
         </blockquote>
       </section>
-
-      {/* Team Preview */}
-      <section className={`flex flex-col items-center text-center`}>
-        <h3
-          className={`text-2xl md:text-3xl font-semibold text-[#008080] mb-6`}
-        >
-          Meet the Team
-        </h3>
-        <div className={`flex flex-wrap gap-8 justify-center`}>
-          <Image
-            src="/image/team1.jpg"
-            alt="Team 1"
-            width={220}
-            height={280}
-            className="rounded-xl shadow-md object-cover"
-          />
-          <Image
-            src="/image/team2.jpg"
-            alt="Team 2"
-            width={220}
-            height={280}
-            className="rounded-xl shadow-md object-cover"
-          />
-          <Image
-            src="/image/team3.jpg"
-            alt="Team 3"
-            width={220}
-            height={280}
-            className="rounded-xl shadow-md object-cover"
-          />
-        </div>
-      </section>
     </main>
   );
 };
