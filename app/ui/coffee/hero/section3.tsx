@@ -2,7 +2,7 @@ import React from 'react';
 
 const Service = () => {
   return (
-    <div className={`mx-16 py-12 min-h-screen`}>
+    <div className={`px-4 md:px-8 lg:px-16 py-12 min-h-screen`}>
       <div className={`grid grid-cols-1 md:grid-cols-2 gap-8`}>
         {/* Service 1 */}
         <div
