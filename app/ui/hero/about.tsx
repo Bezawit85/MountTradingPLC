@@ -11,10 +11,10 @@ const About = () => {
       </h1>
 
       {/* Pharma Section */}
-      <div className="w-full bg-blue-50 py-16 px-6 flex flex-col items-center text-center">
+      <div className="w-full bg-[#CCECEC] py-16 px-6 flex flex-col items-center text-center">
         <div className="max-w-2xl">
           <div className="text-5xl mb-4">📦</div>
-          <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#008080] mb-4">
             Pharma Equipment
           </h2>
           <p className="text-gray-700 mb-8">
@@ -22,7 +22,7 @@ const About = () => {
           </p>
           <Link
             href="/pharma"
-            className="inline-block bg-blue-800 text-white px-6 py-3 rounded-full hover:bg-blue-900 transition"
+            className="inline-block bg-[#008080] text-white px-6 py-3 rounded-full hover:bg-[#019696] transition"
           >
             Explore Pharma Equipment
           </Link>

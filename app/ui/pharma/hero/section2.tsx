@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function AboutPage() {
   return (
     <main
-      className={`min-h-screen bg-gradient-to-b from-white via-blue-50 to-blue-100 flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 py-12`}
+      className={`min-h-screen bg-gradient-to-b from-white via-[#D0F0F0] to-[#B2DCDC] flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 py-12`}
     >
       <section className={`w-full space-y-16`}>
         <motion.div
