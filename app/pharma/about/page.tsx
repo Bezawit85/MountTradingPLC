@@ -1,9 +1,9 @@
-import About from "@/app/ui/pharma/about/section1";
+import About from '@/app/ui/pharma/about/section1';
 
 const page = () => {
   return (
     <div>
-      <About
+      <About />
     </div>
   );
 };
