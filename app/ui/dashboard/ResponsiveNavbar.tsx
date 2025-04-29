@@ -31,19 +31,13 @@ const ResponsiveNavbar = () => {
     setIsLoaded(true);
   }, []);
 
-  const menuItems = ['About', 'Products', 'Services', 'Contact'];
-
   if (!isLoaded) {
     return null; // Don't render anything until the component is loaded
   }
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-50`}>
-      {isMobile ? (
-        <MobileNavbar menuItems={menuItems} />
-      ) : (
-        <DesktopNavbar menuItems={menuItems} />
-      )}
+    <div className="fixed top-0 left-0 w-full z-50">
+      {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
     </div>
   );
 };

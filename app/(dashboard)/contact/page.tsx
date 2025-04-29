@@ -1,12 +1,13 @@
 import Navbar from '@/app/ui/dashboard/Navbar';
+import Contact from '@/app/ui/hero/contact';
 
-const Contact = () => {
+const page = () => {
   return (
     <div className={`min-h-screen`}>
       <Navbar />
-      <h1>contact</h1>
+      <Contact />
     </div>
   );
 };
 
-export default Contact;
+export default page;
