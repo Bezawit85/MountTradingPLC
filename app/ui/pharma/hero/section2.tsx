@@ -4,7 +4,7 @@ import React from 'react';
 const AboutPage = () => {
   return (
     <main
-      className={`min-h-screen bg-gradient-to-b from-white via-[#D0F0F0] to-[#B2DCDC] px-6 md:px-16 py-16 space-y-20`}
+      className={`min-h-screen bg-gradient-to-b from-white via-[#D0F0F0] to-[#B2DCDC] px-6 md:px-16 py-16 space-y-10`}
     >
       <section className={`text-center space-y-6`}>
         <h1 className={`text-4xl md:text-5xl font-extrabold text-[#008080]`}>
