@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const BrandSelector = () => {
   return (
-    <div className={`w-full bg-white py-10 px-4 sm:px-6 md:px-10`}>
-      <div className={`mx-auto grid grid-cols-1 md:grid-cols-2 gap-8`}>
+    <div className={`w-full bg-white py-4 px-4 md:px-8 lg:px-16`}>
+      <div className={`mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8`}>
         {/* Pharmaceutical Equipment */}
         <Link
           href="/pharma"

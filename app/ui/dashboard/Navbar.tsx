@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       <BrandSelector />
       <div
-        className={`flex z-10 relative px-5 sm:px-10 bg-[#008080] justify-between items-center h-28`}
+        className={`flex z-10 relative px-4 md:px-8 lg:px-16 bg-[#008080] justify-between items-center h-20`}
       >
         <h1
           className={`text-white font-bold cursor-pointer text-xs sm:text-lg tracking-wide`}

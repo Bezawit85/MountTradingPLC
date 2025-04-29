@@ -3,7 +3,7 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-    <main className={`relative w-full h-screen`}>
+    <main className={`relative w-full min-h-[80vh] md:min-h-screen`}>
       <Image
         src="/image/medicalEquipmentDesktop.jpg"
         alt="Hero Background"
