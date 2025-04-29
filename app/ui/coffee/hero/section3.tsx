@@ -1,96 +1,63 @@
+'use client';
+
 import React from 'react';
+import { FaCogs, FaRocket, FaHeart, FaShieldAlt } from 'react-icons/fa';
+
+const services = [
+  {
+    title: 'Yirgacheffe',
+    description:
+      'Yirgacheffe coffee is grown in the highlands of the Gedeo Zone in Southern Ethiopia. Known for its bright acidity and floral notes with hints of citrus and jasmine.',
+    icon: <FaCogs size={24} />,
+    bg: 'from-[#F5EDE8] via-white to-amber-50',
+    ring: 'ring-[#4E2814]',
+  },
+  {
+    title: 'Sidamo',
+    description:
+      'Sidamo coffee comes from southern Ethiopia. Renowned for a smooth body, floral aroma, and notes of lemon and tropical fruit.',
+    icon: <FaRocket size={24} />,
+    bg: 'from-[#F5EDE8] via-white to-amber-50',
+    ring: 'ring-[#4E2814]',
+  },
+  {
+    title: 'Harrar',
+    description:
+      'Harrar coffee is wild and fruity with earthy and spicy notes. Full-bodied with wine and chocolate hints and a smoky finish.',
+    icon: <FaHeart size={24} />,
+    bg: 'from-[#F5EDE8] via-white to-amber-50',
+    ring: 'ring-[#4E2814]',
+  },
+  {
+    title: 'Limu',
+    description:
+      'Limu coffee from western Ethiopia is balanced and smooth with light acidity, chocolate tones, and caramel sweetness.',
+    icon: <FaShieldAlt size={24} />,
+    bg: 'from-[#F5EDE8] via-white to-amber-50',
+    ring: 'ring-[#4E2814]',
+  },
+];
 
 const Service = () => {
   return (
-    <div className={`px-4 md:px-8 lg:px-16 py-12 min-h-screen`}>
-      <div className={`grid grid-cols-1 md:grid-cols-2 gap-8`}>
-        {/* Service 1 */}
-        <div
-          className={`bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4`}
-        >
+    <div className="px-4 md:px-8 lg:px-16 py-12 min-h-screen bg-[#f9fafb]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {services.map((service, i) => (
           <div
-            className={`w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center shrink-0`}
+            key={i}
+            className={`p-6 rounded-xl min-h-60 shadow-md bg-gradient-to-br ${service.bg} backdrop-blur-xl border ${service.ring} ring-1 transition duration-300`}
           >
-            <i className={`fas fa-cogs`}></i>
+            <div className="flex items-start space-x-8">
+              <div className="w-16 h-16 rounded-full bg-[#008080] text-white flex items-center justify-center shrink-0">
+                {service.icon}
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-1">{service.title}</h3>
+                <p className="text-gray-700">{service.description}</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 className={`text-xl font-semibold`}>Yirgacheffe</h3>
-            <p className={`text-gray-500`}>
-              `Yirgacheffe coffee is grown in the highlands of the Gedeo Zone in
-              Southern Ethiopia. Known for its bright acidity and vibrant floral
-              notes, this coffee has a clean and crisp flavor profile with hints
-              of citrus, jasmine, and bergamot. It is often considered one of
-              the best coffees globally due to its distinctive and complex
-              flavor.`
-            </p>
-          </div>
-        </div>
-
-        {/* Service 2 */}
-        <div
-          className={`bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4`}
-        >
-          <div
-            className={`w-16 h-16 rounded-full bg-green-500 text-white flex items-center justify-center shrink-0`}
-          >
-            <i className={`fas fa-rocket`}></i>
-          </div>
-          <div>
-            <h3 className={`text-xl font-semibold`}>Sidamo</h3>
-            <p className={`text-gray-500`}>
-              `Sidamo coffee comes from the Sidamo region in southern Ethiopia.
-              This coffee is renowned for its smooth body, moderate acidity, and
-              floral aroma. It often carries notes of lemon, tropical fruits,
-              and spices, making it highly prized by coffee connoisseurs. Sidamo
-              coffees are versatile, ideal for both espresso and drip brewing.`
-            </p>
-          </div>
-        </div>
-
-        {/* Service 3 */}
-        <div
-          className={`bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4`}
-        >
-          <div
-            className={`w-16 h-16 rounded-full bg-yellow-500 text-white flex items-center justify-center shrink-0`}
-          >
-            <i className={`fas fa-heart`}></i>
-          </div>
-          <div>
-            <h3 className={`text-xl font-semibold`}>Harrar</h3>
-            <p className={`text-gray-500`}>
-              `Harrar coffee is produced in the eastern part of Ethiopia,
-              particularly in the Hararghe region. It is known for its
-              distinctive, wild flavor profile, which includes fruity, earthy,
-              and spicy notes. Harrar coffee often has a medium to full body and
-              a strong, complex flavor with hints of wine, chocolate, and a
-              subtle smoky finish. It is typically processed using the natural
-              (dry) method.`
-            </p>
-          </div>
-        </div>
-
-        {/* Service 4 */}
-        <div
-          className={`bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4`}
-        >
-          <div
-            className={`w-16 h-16 rounded-full bg-red-500 text-white flex items-center justify-center shrink-0`}
-          >
-            <i className={`fas fa-shield-alt`}></i>
-          </div>
-          <div>
-            <h3 className={`text-xl font-semibold`}>Limu</h3>
-            <p className={`text-gray-500`}>
-              `Limu coffee is grown in the western part of Ethiopia, primarily
-              in the Jimma Zone. This coffee is known for its balanced flavor,
-              smooth body, and mild acidity. It has a clean, sweet profile with
-              notes of chocolate, caramel, and light fruity undertones. Limu is
-              often regarded as a medium-bodied coffee that is well-suited for a
-              variety of brewing methods.`
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
