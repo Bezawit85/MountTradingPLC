@@ -27,15 +27,15 @@ const DesktopNavbar = ({ menuItems }: { menuItems: string[] }) => {
         {menuItems.map((item, index) => (
           <li
             key={index}
-            className={`relative hover:text-blue-600 group ${
-              activeItem === item ? 'text-blue-600' : ''
+            className={`relative hover:text-[#008080] group ${
+              activeItem === item ? 'text-[#008080]' : ''
             }`}
             onClick={() => handleSetActiveItem(item)}
           >
             <Link href={getLinkPath(item)} passHref>
               {item}
               <span
-                className={`absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full`}
+                className={`absolute bottom-0 left-0 w-0 h-[2px] bg-[#008080] transition-all duration-300 group-hover:w-full`}
               ></span>
             </Link>
           </li>

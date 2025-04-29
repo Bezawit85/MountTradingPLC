@@ -15,7 +15,7 @@ const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
   };
 
   return (
-    <div className="flex items-center justify-between p-4 text-black bg-white font-bold z-10 shadow-lg shadow-blue-600/30">
+    <div className="flex items-center justify-between p-4 text-black bg-white font-bold z-10 shadow-lg shadow-[#008080]/30">
       <h1>Mount Trading PLC</h1>
       <button onClick={() => setOpen(!open)} className="text-3xl">
         {open ? <CgClose /> : <CgMenuRightAlt />}
@@ -34,7 +34,7 @@ const MobileNavbar = ({ menuItems }: { menuItems: string[] }) => {
           >
             <p className="py-4 pl-4 relative group w-fit">
               {item}
-              <span className="absolute bottom-1 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] bg-[#008080] transition-all duration-300 group-hover:w-full"></span>
             </p>
           </Link>
         ))}
