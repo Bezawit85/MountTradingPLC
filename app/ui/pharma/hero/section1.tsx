@@ -3,7 +3,7 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-    <main className={`relative w-full min-h-[80vh] md:min-h-screen`}>
+    <main className={`relative w-full min-h-screen`}>
       <Image
         src="/image/medicalEquipmentDesktop.jpg"
         alt="Hero Background"
@@ -23,22 +23,27 @@ const HomePage = () => {
         className="md:hidden"
       />
       <div className={`bg-black opacity-20 absolute inset-0`}></div>
+
       <section
-        className={`absolute inset-0 flex flex-col justify-center px-4 md:px-8 lg:px-16`}
+        className={`absolute inset-0 flex flex-col justify-center items-start gap-6 px-6 md:px-16 z-10`}
       >
         <h1
-          className={`text-3xl md:text-6xl font-bold tracking-wide mb-4 text-white`}
+          className={`text-4xl md:text-6xl font-extrabold tracking-wide text-white drop-shadow-md`}
         >
-          Medical <span className={`text-[#008080]`}>Equipment supply</span>
+          Medical <span className={`text-[#008080]`}>Equipment Supply</span>
         </h1>
         <p
-          className={`text-base md:text-lg md:max-w-3xl tracking-wide text-white`}
+          className={`text-base md:text-lg max-w-2xl text-white drop-shadow-sm`}
         >
-          We supply high-quality, reliable medical equipment to hospitals,
-          clinics, and healthcare professionals. Our mission is to support
-          patient care with cutting-edge technology, exceptional service, and
-          fast delivery. Partner with us for solutions that make a difference.
+          High-quality, reliable equipment for hospitals, clinics, and
+          professionals. Backed by expert service, fast delivery, and
+          cutting-edge tech.
         </p>
+        <button
+          className={`bg-[#008080] hover:bg-[#019696] text-white font-semibold px-6 py-3 rounded-full shadow-lg transition`}
+        >
+          Get in Touch
+        </button>
       </section>
     </main>
   );

@@ -1,42 +1,91 @@
-export default function AboutPage() {
+import Image from 'next/image';
+import React from 'react';
+
+const AboutPage = () => {
   return (
     <main
-      className={`min-h-screen bg-gradient-to-b from-white via-[#D0F0F0] to-[#B2DCDC] flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 py-12`}
+      className={`min-h-screen bg-gradient-to-b from-white via-[#D0F0F0] to-[#B2DCDC] px-6 md:px-16 py-16 space-y-20`}
     >
-      <section className={`w-full space-y-16`}>
-        <div className="text-center">
-          <h1 className={`text-3xl md:text-5xl font-extrabold text-[#008080]`}>
-            Revolutionizing Healthcare Equipment
-          </h1>
-          <p className={`mt-4 text-base md:text-lg text-[#019696]`}>
-            We deliver possibilities, not just machines.
-          </p>
-        </div>
+      <section className={`text-center space-y-6`}>
+        <h1 className={`text-4xl md:text-5xl font-extrabold text-[#008080]`}>
+          Revolutionizing Healthcare Equipment
+        </h1>
+        <p className={`text-md md:text-lg text-[#019696]`}>
+          We deliver possibilities, not just machines.
+        </p>
+      </section>
 
-        {/* Who We Are */}
-        <div className="bg-white bg-opacity-70 backdrop-blur-md p-8 rounded-3xl shadow-xl">
-          <h2 className={`text-xl md:text-3xl font-bold text-black mb-6`}>
+      {/* Who We Are*/}
+      <section
+        className={`flex flex-col md:flex-row items-center gap-12 bg-white bg-opacity-70 backdrop-blur-md p-10 rounded-3xl shadow-xl`}
+      >
+        <div className={`flex-1 space-y-4 max-w-lg`}>
+          <h2 className={`text-2xl md:text-3xl font-bold text-black`}>
             Who We Are
           </h2>
-          <ul
-            className={`list-disc list-inside text-gray-700 space-y-3 text-base md:text-lg`}
-          >
-            <li>Innovators merging technology and healthcare excellence</li>
-            <li>Global partners for clinics and hospitals</li>
-            <li>Passionate about making a real-world impact</li>
-          </ul>
+          <p className={`text-gray-700 text-base md:text-lg leading-relaxed`}>
+            We are innovators at the intersection of technology and healthcare,
+            dedicated to transforming how medical services are delivered. With a
+            global network of partners, we support clinics and hospitals by
+            offering cutting-edge equipment and exceptional service. Our team is
+            passionate about driving meaningful, real-world impact where it
+            matters most.
+          </p>
         </div>
+        <div className={`flex-1 w-full h-64 relative hidden md:block`}>
+          <Image
+            src="/image/certificate.jpg"
+            alt="Certificate or Team"
+            fill
+            className="rounded-xl object-cover"
+            style={{ objectPosition: 'center' }}
+          />
+        </div>
+      </section>
 
-        {/* Our Mission */}
-        <div className="text-center">
-          <blockquote
-            className={`text-lg md:text-2xl italic font-medium #019696`}
-          >
-            &quot;Empower every healthcare provider with world-class
-            technology.&quot;
-          </blockquote>
+      {/* Mission Quote */}
+      <section className={`text-center`}>
+        <blockquote
+          className={`text-xl md:text-2xl italic font-medium text-[#019696]`}
+        >
+          &quot;Empower every healthcare provider with world-class
+          technology.&quot;
+        </blockquote>
+      </section>
+
+      {/* Team Preview */}
+      <section className={`flex flex-col items-center text-center`}>
+        <h3
+          className={`text-2xl md:text-3xl font-semibold text-[#008080] mb-6`}
+        >
+          Meet the Team
+        </h3>
+        <div className={`flex flex-wrap gap-8 justify-center`}>
+          <Image
+            src="/image/team1.jpg"
+            alt="Team 1"
+            width={220}
+            height={280}
+            className="rounded-xl shadow-md object-cover"
+          />
+          <Image
+            src="/image/team2.jpg"
+            alt="Team 2"
+            width={220}
+            height={280}
+            className="rounded-xl shadow-md object-cover"
+          />
+          <Image
+            src="/image/team3.jpg"
+            alt="Team 3"
+            width={220}
+            height={280}
+            className="rounded-xl shadow-md object-cover"
+          />
         </div>
       </section>
     </main>
   );
-}
+};
+
+export default AboutPage;
